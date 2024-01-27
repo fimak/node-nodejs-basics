@@ -2,7 +2,7 @@ import fs from 'node:fs/promises';
 
 const copy = async () => {
   // Write your code here
-  const filesPath = './src/fs/files/asd';
+  const filesPath = './src/fs/files';
   const filesCopyPath = './src/fs/files_copy';
   const errorText = 'FS operation failed';
 
