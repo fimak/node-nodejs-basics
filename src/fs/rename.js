@@ -1,9 +1,12 @@
 import fs from 'node:fs/promises';
+import path from 'node:path';
 
 const rename = async () => {
   // Write your code here
-  const wrongFileName = './src/fs/files/wrongFilename.txt';
-  const properFileName = './src/fs/files/properFilename.md';
+  const __filename = new URL(import.meta.url).pathname;
+  const __dirname = path.dirname(__filename);
+  const wrongFileName = path.join(__dirname, 'files', 'wrongFilename.txt');
+  const properFileName = path.join(__dirname, 'files', 'properFilename.md');
   const errorText = 'FS operation failed';
 
   try {

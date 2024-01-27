@@ -1,8 +1,11 @@
 import fs from 'node:fs/promises';
+import path from 'node:path';
 
 const list = async () => {
   // Write your code here
-  const filesPath = './src/fs/files';
+  const __filename = new URL(import.meta.url).pathname;
+  const __dirname = path.dirname(__filename);
+  const filesPath = path.join(__dirname, 'files');
   const errorText = 'FS operation failed';
 
   try {
