@@ -4,7 +4,7 @@ const create = async () => {
   // Write your code here
   const filePath = './src/fs/files/fresh.txt';
   const content = 'I am fresh and young';
-  const errorText = 'File already exists';
+  const errorText = 'FS operation failed';
   try {
     await fs.access(filePath);
     throw new Error(errorText);
