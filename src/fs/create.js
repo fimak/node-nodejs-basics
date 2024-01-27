@@ -9,7 +9,7 @@ const create = async () => {
     await fs.access(filePath);
     throw new Error(errorText);
   } catch (err) {
-    if (err.code === 'ENOENT' && err.message !== errorText) {
+    if (err.code === 'ENOENT') {
       await fs.writeFile(filePath, content);
     } else {
       throw err;
